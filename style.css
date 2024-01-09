@@ -1,0 +1,562 @@
+/***** Universal and common codes *****/
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+:root {
+    --primary-color: rgb(29, 233, 182);
+}
+
+.btn {
+    padding: 15px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+/***** Starting the navbar section *****/
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 99;
+}
+
+.nav-logo {
+    color: var(--primary-color);
+    transition: 0.3s;
+}
+
+.nav-logo:hover {
+    color: #fff;
+}
+
+#navbar ul {
+    display: flex;
+    align-items: center;
+}
+
+#navbar ul li a {
+    color: #ddd;
+    padding: 0px 25px;
+}
+
+#navbar ul li:last-child a {
+    color: var(--primary-color);
+}
+
+#navbar ul li:last-child a i {
+    padding-right: 10px;
+}
+
+#navbar ul li a:hover {
+    color: #fff;
+}
+
+/***** Starting the banner section *****/
+#banner,
+#features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#banner {
+    height: 100vh;
+}
+
+#banner h1 {
+    font-size: 50px;
+    line-height: 60px;
+}
+
+#banner p {
+    color: #eee;
+    padding: 25px;
+    line-height: 25px;
+}
+
+#banner button {
+    background-color: var(--primary-color);
+    text-transform: uppercase;
+    align-items: center;
+    display: flex;
+}
+
+#banner button i {
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+/***** Starting the features section *****/
+.features-head h2 {
+    font-size: 40px;
+    line-height: 60px;
+}
+
+.features-head p {
+    color: #eee;
+    padding: 25px;
+    line-height: 25px;
+}
+
+.features-body {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 80px 0px 40px;
+    gap: 40px;
+}
+
+.features-body .box .box-logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    font-size: 25px;
+}
+
+.first-box-logo {
+    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.box-details {
+    color: #78909c !important;
+    padding-top: 20px;
+    line-height: 25px;
+}
+
+.features-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 100px 0px;
+}
+
+.features-footer-slider {
+    width: 50%;
+    position: relative;
+}
+
+.features-footer .features-footer-slider img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.features-footer-content {
+    width: 80%;
+}
+
+.features-footer-content h1 {
+    font-size: 40px;
+    line-height: 60px;
+}
+
+.features-footer-content p {
+    color: #eee;
+    padding: 25px 0px;
+    line-height: 25px;
+    width: 90%;
+}
+
+.features-footer-content button {
+    border-radius: 4px;
+}
+
+.active-sliders {
+    position: relative;
+    top: -20px;
+    left: 0;
+    text-align: center;
+}
+
+.active-slider {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 0px 5px;
+}
+
+/***** Starting the pricing section *****/
+#pricing {
+    background-color: rgb(17, 23, 26);
+    text-align: center;
+    padding: 80px 0px;
+}
+
+.pricing-header h1 {
+    font-size: 40px;
+}
+
+.pricing-header p {
+    padding: 20px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.pricing-boxes {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+}
+
+.pricing-box {
+    background-color: rgb(38, 50, 56);
+    color: #fff;
+    padding: 40px 10px;
+    border-radius: 5px;
+}
+
+.pricing-box h3 {
+    font-size: 30px;
+    padding-top: 30px;
+}
+
+.pricing-box h1 {
+    color: var(--primary-color);
+    padding-top: 30px;
+    font-size: 40px;
+}
+
+.pricing-box p {
+    color: #78909c;
+    padding: 15px 0px 30px 0px;
+}
+
+.pricing-box ul li {
+    padding: 12px 0px;
+    font-size: 17px;
+    color: #ddd;
+}
+
+.pricing-box button {
+    margin-top: 30px;
+    background-color: var(--primary-color);
+    transition: 0.3s;
+}
+
+.pricing-list {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 90px;
+    position: relative;
+}
+
+.pricing-list-content {
+    width: 40%;
+    text-align: left;
+}
+
+.pricing-list-content p {
+    line-height: 30px;
+    width: 80%;
+    font-size: 20px;
+    color: #ddd;
+}
+
+.pricing-list-content h2 {
+    padding: 0px 0px 20px 0px;
+}
+
+.pricing-list ul li {
+    padding: 15px 0px;
+    color: #ddd;
+    text-align: left;
+    position: relative;
+}
+
+.pricing-list ul li::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    left: -30px;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    gap: 120px;
+}
+
+.pricing-list::after {
+    content: "";
+    width: 70%;
+    height: 1px;
+    background-color: rgba(29, 233, 182, 0.2);
+    position: absolute;
+    top: 350px;
+    left: 160px;
+}
+
+.pricing-footer {
+    padding-top: 100px;
+}
+
+.pricing-footer h2 {
+    padding: 20px;
+}
+
+.pricing-footer p {
+    color: #ddd;
+    padding: 10px;
+}
+
+.pricing-footer button {
+    background-color: var(--primary-color);
+    margin-top: 30px;
+}
+
+/***** Starting the FAQ section *****/
+#faq {
+    text-align: center;
+    padding: 100px;
+}
+
+.faq-header {
+    padding-bottom: 80px;
+}
+
+.faq-header p {
+    color: #78909c;
+    padding-top: 20px;
+}
+
+.faq-body {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    text-align: left;
+    grid-row-gap: 70px;
+}
+
+.faq-desc p {
+    color: #78909c;
+    padding-top: 20px;
+    line-height: 25px;
+    width: 80%;
+}
+
+.faq-footer {
+    padding: 100px 0px 50px 0px;
+}
+
+.faq-footer h2 {
+    padding-bottom: 20px;
+}
+
+.faq-footer button {
+    background-color: var(--primary-color);
+}
+
+/***** Starting the blog section *****/
+#blog {
+    padding: 100px 0px;
+    background-color: rgb(17, 23, 26);
+    text-align: center;
+}
+
+.blog-header h1 {
+    font-size: 40px;
+}
+
+.blog-header p {
+    padding: 20px 0px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #78909c;
+}
+
+.blog-body {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.card {
+    background-color: rgb(38, 50, 56);
+    text-align: left;
+}
+
+.card-img img {
+    width: 100%;
+}
+
+.card-title {
+    line-height: 35px;
+    font-size: 20px;
+}
+
+.card-date {
+    color: #78909c;
+    padding: 15px 0;
+}
+
+.card-link {
+    color: var(--primary-color);
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-desc {
+    line-height: 25px;
+    color: #ddd;
+}
+
+#blog button {
+    margin-top: 80px;
+    background-color: var(--primary-color);
+}
+
+/***** Starting the footer section *****/
+#contact {
+    padding: 50px 0px;
+}
+
+.footer-items {
+    display: grid;
+    grid-template-columns: 400px auto auto auto;
+    gap: 150px;
+}
+
+.footer-item h3 {
+    padding-bottom: 20px;
+}
+
+.footer-item p {
+    color: #78909c;
+    line-height: 25px;
+}
+
+.footer-item ul li {
+    color: #ddd;
+    padding: 10px 0;
+}
+
+.contact-social {
+    margin-top: 30px;
+}
+
+.contact-social a {
+    margin: 0 10px;
+    cursor: pointer;
+    color: #ddd;
+}
+
+.contact-social a:hover {
+    color: #fff;
+}
+
+.copyright {
+    padding: 60px 0px 30px 0px;
+    text-align: center;
+    color: #78909c;
+}
+
+/***** Starting the changing color section *****/
+#changeColor {
+    background-color: rgb(38, 50, 56);
+    position: fixed;
+    top: 220px;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.colors span {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#changeColor h4 {
+    padding: 15px 0;
+}
+
+#changeColor p {
+    color: #ddd;
+    line-height: 25px;
+    padding-top: 15px;
+}
+
+#gear {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(38, 50, 56);
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -40px;
+    cursor: pointer;
+    top: 0;
+}
+
+#top {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(29, 233, 182, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 50px;
+    right: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.show {
+    left: -292px;
+    transition: 0.3s;
+}
