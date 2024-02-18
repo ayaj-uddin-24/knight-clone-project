@@ -86,6 +86,10 @@ button {
     color: #fff;
 }
 
+#bar {
+    display: none;
+}
+
 /***** Starting the banner section *****/
 #banner,
 #features {
@@ -481,6 +485,12 @@ button {
     padding: 10px 0;
 }
 
+.footer-special {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 150px;
+}
+
 .contact-social {
     margin-top: 30px;
 }
@@ -559,4 +569,170 @@ button {
 .show {
     left: -292px;
     transition: 0.3s;
+}
+
+/***** Styles for mobile and tablet *****/
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    /* Navbar section */
+    #navbar ul {
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: black;
+        width: 100%;
+        text-align: left;
+        display: none;
+    }
+
+    #navbar ul li {
+        padding: 15px 0;
+    }
+
+    #bar {
+        display: block;
+        font-size: 25px;
+    }
+
+    /* Banner Section */
+    #banner {
+        height: 80vh;
+    }
+
+    #banner h1 {
+        font-size: 30px;
+        line-height: 60px;
+    }
+
+    /* Features Section */
+    .features-head h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .features-body {
+        grid-template-columns: auto;
+    }
+
+    .features-footer .container {
+        flex-direction: column;
+    }
+
+    .features-footer-content {
+        width: 100%;
+    }
+
+    .features-footer-content h1 {
+        font-size: 27px;
+        line-height: 40px;
+    }
+
+    .features-footer-content p {
+        width: 100%;
+        text-align: justify;
+    }
+
+    .features-footer-slider {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Pricing Section */
+    .pricing-boxes {
+        grid-template-columns: auto;
+    }
+
+    .pricing-boxes .pricing-box {
+        width: 90%;
+        margin: auto;
+    }
+
+    .pricing-header h1 {
+        font-size: 35px;
+    }
+
+    .pricing-list {
+        flex-direction: column;
+        padding: 40px 20px;
+        width: 100%;
+    }
+
+    .pricing-list-content {
+        width: 100%;
+    }
+
+    .list {
+        padding-top: 40px;
+        gap: 30px;
+        flex-direction: column;
+        padding-left: 50px;
+    }
+
+    .pricing-list::after {
+        top: 650px;
+        left: 60px;
+        height: 3px;
+    }
+
+    .pricing-list-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .pricing-list-content p {
+        line-height: 25px;
+        width: 100%;
+        font-size: 15px;
+    }
+
+    /* FAQ Section */
+    #faq {
+        padding: 100px 50px;
+    }
+
+    #faq .faq-header h1 {
+        font-size: 26px;
+    }
+
+    .faq-body {
+        grid-template-columns: auto;
+        text-align: center;
+        width: 100%;
+    }
+
+    .faq-desc p {
+        width: 100%;
+    }
+
+    /* Blog Section */
+    .blog-body {
+        grid-template-columns: auto;
+    }
+
+    .blog-body .card {
+        width: 95%;
+        margin: auto;
+    }
+
+    /* Footer Section */
+    .footer-items {
+        grid-template-columns: 100%;
+        gap: 50px;
+    }
+
+    .footer-special {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 50px 100px;
+    }
+
+    #top {
+        bottom: 40px;
+        right: 40px;
+    }
 }

@@ -21,6 +21,7 @@ topScroll.addEventListener("click", function () {
     document.documentElement.scrollTop = 0;
 });
 
+
 // Changing color button
 const gear = document.getElementById("gear");
 const changeColor = document.getElementById("changeColor");
@@ -37,3 +38,11 @@ for (let i = 0; i < colors.length; i++) {
         mainColor.style.setProperty("--primary-color", color);
     });
 }
+
+
+// Navbar toggler function
+$(document).ready(function () {
+    $("#bar").click(function () {
+        $("#navbar ul").slideToggle();
+    })
+})
